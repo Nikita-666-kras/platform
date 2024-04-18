@@ -3,15 +3,7 @@
   <database-model serializer="dbm" dbms="POSTGRES" family-id="POSTGRES" format-version="4.51">
     <root id="1">
       <DateStyle>dmy</DateStyle>
-      <Grants>1||-9223372036854775808|c|G
-1||10|c|G
-1||10|C|G
-1||10|T|G
-4||-9223372036854775808|c|G
-4||10|c|G
-4||10|C|G
-4||10|T|G</Grants>
-      <IntrospectionStateNumber>811</IntrospectionStateNumber>
+      <IntrospectionStateNumber>815</IntrospectionStateNumber>
       <ServerVersion>16.2</ServerVersion>
       <StartupTime>1713043317</StartupTime>
       <TimeZones>true ACDT
@@ -821,7 +813,7 @@ false Zulu
 14643||10|C|G
 14643||-9223372036854775808|U|G
 14643||10|U|G</Grants>
-      <IntrospectionStateNumber>811</IntrospectionStateNumber>
+      <IntrospectionStateNumber>815</IntrospectionStateNumber>
       <ObjectId>5</ObjectId>
       <OwnerName>postgres</OwnerName>
     </database>
@@ -4254,11 +4246,68 @@ false Zulu
     <schema id="267" parent="5" name="public">
       <Comment>standard public schema</Comment>
       <Current>1</Current>
-      <IntrospectionStateNumber>811</IntrospectionStateNumber>
-      <LastIntrospectionLocalTimestamp>2024-04-18.12:06:45</LastIntrospectionLocalTimestamp>
+      <IntrospectionStateNumber>815</IntrospectionStateNumber>
+      <LastIntrospectionLocalTimestamp>2024-04-18.12:36:30</LastIntrospectionLocalTimestamp>
       <ObjectId>2200</ObjectId>
       <StateNumber>524</StateNumber>
       <OwnerName>pg_database_owner</OwnerName>
     </schema>
+    <sequence id="268" parent="267" name="cage_id_seq">
+      <DasType>integer|0s</DasType>
+      <ObjectId>32878</ObjectId>
+      <SequenceIdentity>1</SequenceIdentity>
+      <StartValue>1</StartValue>
+      <StateNumber>812</StateNumber>
+      <OwnerName>postgres</OwnerName>
+    </sequence>
+    <table id="269" parent="267" name="cage">
+      <ObjectId>32879</ObjectId>
+      <StateNumber>812</StateNumber>
+      <AccessMethodId>2</AccessMethodId>
+      <OwnerName>postgres</OwnerName>
+    </table>
+    <column id="270" parent="269" name="id">
+      <DasType>integer|0s</DasType>
+      <DefaultExpression>nextval(&apos;cage_id_seq&apos;::regclass)</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+      <StateNumber>812</StateNumber>
+      <SequenceId>32878</SequenceId>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="271" parent="269" name="role">
+      <DasType>varchar(255)|0s</DasType>
+      <Position>2</Position>
+      <StateNumber>812</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="272" parent="269" name="titli_subject">
+      <DasType>varchar(255)|0s</DasType>
+      <Position>3</Position>
+      <StateNumber>812</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="273" parent="269" name="user_name">
+      <DasType>varchar(255)|0s</DasType>
+      <Position>4</Position>
+      <StateNumber>812</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <index id="274" parent="269" name="cage_pkey">
+      <ColNames>id</ColNames>
+      <NameSurrogate>1</NameSurrogate>
+      <ObjectId>32885</ObjectId>
+      <Primary>1</Primary>
+      <StateNumber>812</StateNumber>
+      <Unique>1</Unique>
+      <AccessMethodId>403</AccessMethodId>
+    </index>
+    <key id="275" parent="269" name="cage_pkey">
+      <NameSurrogate>1</NameSurrogate>
+      <ObjectId>32886</ObjectId>
+      <Primary>1</Primary>
+      <StateNumber>812</StateNumber>
+      <UnderlyingIndexId>32885</UnderlyingIndexId>
+    </key>
   </database-model>
 </dataSource>
